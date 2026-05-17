@@ -18,7 +18,8 @@ def move_file(command: str) -> None:
                 os.mkdir(new_directory)
             path = new_directory + "/"
             file_out = file_out[(file_out.find("/"))+1:]
-        with open(file_in, "r") as file1, open(path + file_out, "w") as file2:
+        with open(file_in, "r") as file1, \
+                open(path + file_out, "w") as file2:
             content = (file1.read())
             file2.write(content)
         os.remove(file_in)
